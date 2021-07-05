@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+ <html>
+ <head>
+   <title>List Of Contacts</title>
+ <style type="text/css">
+ 
+   h3{
+	   color:orange;
+	  padding:3%;
+	  background-color: black;
+	   text-align:center;
+	 }
+	body{
+	 text-align:center;
+	 
+	 }
+	 head,body{
+	  background-color:#F9B5A7;
+	  margin:3%;
+	  }
+	table{ border:1px solid black;
+	 margin-left:auto;
+	  margin-right:auto;
+	 
+	 }
+	table td {
+        border: 1px solid orange;
+        }
+   table th {
+     border: 1px solid ForestGreen;
+        }
+  </style>
+ </head>
+ <body>
+ <h3>Contact Details</h3>   
+ <table>
+ <thead><tr>
+ <th>Sno</th>
+ <th>FirstName</th>
+<th>LastName</th>   
+ <th>MobileNumber</th>
+<th>OfficeNumber</th>
+ <th>MailID</th>
+	 <th>Address</th></tr>
+ </thead>
+	 <tbody>
+ {% for row in rows %}
+ <tr>
+ <td>{{row["Sno"]}}</td>
+ <td>{{row["FirstName"]}}</td>
+ <td>{{row["LastName"]}}</td>
+ <td>{{row["MobileNumber"]}}</td>
+ <td>{{row["OfficeNumber"]}}</td>
+ <td>{{row["mailid"]}}</td>
+ <td>{{row["address"]}}</td>
+		 </tr></tbody>
+ {% endfor %}   
+ </table>
+ <br><br>
+ <a href="/">Go back to home page</a>
+ </body>
+ </html> 

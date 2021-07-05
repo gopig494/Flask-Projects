@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+ <html>
+ <head>
+ <title>Add Contact</title>
+<style type="text/css">
+   h2{
+	
+	 text-align:center;
+	  }
+   h2{
+	   color:orange;
+	  padding:3%;
+	  background-color: black;
+	  }
+	
+  head,body{
+	  background-color:#F9B5A7;
+	  margin:3%;
+	  }
+  form{text-align:center;
+	 font-size:30px;
+		   }
+   input{padding:8px;}
+
+  </style>
+ </head>
+ <body>
+  <h2>Contact Information</h2>
+ <form action = "/savedetails" method="post">   
+	 <div><lable> First Name : </lable>
+	 <input type="name" name="firstname" placeholder="Type your First name">&emsp;&emsp;
+     <lable> Last Name : </lable>
+	 <input type="name" name="lastname" placeholder="Type your Last name"></div><br>
+	 <lable> Mobile Number : </lable>
+	 <input type="number" name="mnumber" placeholder="Type your Mobile Number">&emsp;&emsp;
+	 <lable> Office Number : </lable>
+	 <input type="number" name="onumber" placeholder="Type your office Number"><br><br>
+     <lable> E-mail ID : </lable>
+	 <input type="email" name="mail" placeholder="Type E-mail id ">&emsp;&emsp;
+	 <lable> Address : </lable>
+	 <input type="text" name="address" placeholder="Type Your Address ">
+	 <br><br><input type="submit" value="Submit">
+	 
+</form>
+ </body>
+ </html> 
