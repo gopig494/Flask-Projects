@@ -1,0 +1,50 @@
+
+ 
+ <!DOCTYPE html>
+ <html>
+ <head>
+ <title>Add Contact</title>
+<style type="text/css">
+   h2{
+	
+	 text-align:center;
+	  }
+   h2{
+	   color:orange;
+	  padding:3%;
+	  background-color: black;
+	  }
+	
+  head,body{
+	  background-color:#F9B5A7;
+	  margin:3%;
+	  }
+  form{text-align:center;
+	 font-size:30px;
+		   }
+   input{padding:8px;}
+
+  </style>
+ </head>
+ <body>
+  <h2>Contact Information</h2>
+ <form action = "/updated" method="update">   {% for row in rows %}
+	 <div><p name="sno">{{row["Sno"]}}</p>
+		 
+		<lable> First Name : </lable>
+	 <input type="name" name="firstname" value="{{row.FirstName}}">&emsp;&emsp;
+     <lable> Last Name : </lable>
+	 <input type="name" name="lastname" value="{{row.LastName}}"></div><br>
+	 <lable> Mobile Number : </lable>
+	 <input type="number" name="mnumber" value="{{row.MobileNumber}}">&emsp;&emsp;
+	 <lable> Office Number : </lable>
+	 <input type="number" name="onumber" value="{{row.OfficeNumber}}"><br><br>
+     <lable> E-mail ID : </lable>
+	 <input type="email" name="mail"value="{{row.mailid}}">&emsp;&emsp;
+	 <lable> Address : </lable>
+	 <input type="text" name="address" value="{{row.address}}">
+	 <br><br><input type="submit" value="Submit">
+	 {% endfor %}  
+</form>
+ </body>
+ </html> 
