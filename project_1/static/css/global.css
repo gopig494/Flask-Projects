@@ -1,0 +1,56 @@
+.register-login{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    gap: 30px;
+}
+
+.register button{
+    background: cadetblue;
+    color: white;
+    padding: 10px;
+    border-radius: 14px;
+    cursor: pointer;
+}
+
+.login button{
+    background: blue;
+    color: white;
+    padding: 10px;
+    border-radius: 14px;
+    cursor: pointer;
+}
+
+.register-page{
+    position: relative;
+    height: 100vh;
+}
+
+.reg-sub-container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.user-name-reg,.pass-reg,.email-reg{
+    margin-bottom: 7px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.user-name-login input,.pass-login input{
+    margin-top:9px;
+    display: flex;
+    flex-direction: column;
+
+}
+.pass-login{
+    margin-top: 5px;
+}
+input[type='submit']{
+    margin-top: 13px;
+}
+

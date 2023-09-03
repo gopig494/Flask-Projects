@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel = "stylesheet" href="{{url_for('static',filename = 'css/global.css')}}">
+    <script type="text/javascript" src="{{url_for('static',filename = 'js/global.js')}}"></script>
+</head>
+<body>
+    <div class="register-page">
+        <div class="reg-sub-container">
+            <p>Welcome to Register Page</p>
+            {% with message = get_flashed_messages(with_categories = True) %}
+                {% if message %}
+                    {% for status,msg in message %}
+                        <p>{{msg}}</p>
+                    {% endfor %}
+                {% endif %}
+            {% endwith %}
+            <form action="/register" method="POST">
+                <div class="user-name-reg"> 
+                    <label>User Name : </label>
+                    <input type="text" name="user_name" required>
+                </div>
+                <div class="email-reg"> 
+                    <label>Email : </label>
+                    <input type="email" name="email" required>
+                </div>
+                <div class="pass-reg">
+                    <label>Password : </label>
+                    <input type="password" name="password" required>
+                </div>
+                <div class="pass-reg">
+                    <label>Confirm Password : </label>
+                    <input type="password" name="confirm_password" required>
+                </div>
+                <div>
+                    <input type="submit">
+                    <button onclick="login()">Login</button>    
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
+

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UPLOAD FILES</title>
+</head>
+<body>
+    {% with message = get_flashed_messages(with_categories=true) %}
+        {% if message %}
+            {% set status,message = message[0][1],message[0][0] %}
+            <p >{{status}}</p>
+            <p>{{message}}</p>
+        {% endif %}
+    {% endwith %}
+    <form action="uploadfiles" method="POST" enctype="multipart/form-data">
+        <label>File</label>
+        <input type="file" name="all_files" >
+        <input type="submit">
+    </form>
+    <form action="uploadfilesexcel" method="POST" enctype="multipart/form-data">
+        <label>File</label>
+        <input type="file" name="excel_file" >
+        <input type="submit">
+    </form>
+    {% if data %}
+        {{data | safe}}
+    {% endif %}
+
+</body>
+</html>

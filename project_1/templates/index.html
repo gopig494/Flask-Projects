@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flask</title>
+    <link rel = "stylesheet" href="{{url_for('static',filename = 'css/global.css')}}">
+    <script type="text/javascript" src="{{url_for('static',filename = 'js/global.js')}}"></script>
+</head>
+<body>
+    <div class="register-login">
+        <div class="register">
+            <button onclick="register()">Register</button>
+        </div>
+        <div class="login">
+            <button onclick="login()">Login</button>
+        </div>
+    </div>
+</body>
+</html>
